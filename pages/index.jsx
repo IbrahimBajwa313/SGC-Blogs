@@ -1,6 +1,6 @@
 // pages/index.js
 import Wrapper from "../components/Wrapper";
-// import PostCard from "../components/PostCard";
+import PostCard from "../components/PostCard";
 import HeroSection from "@/components/HeroSection";
 import { FaSignOutAlt } from "react-icons/fa";
 import { useUser } from "../context/UserContext";
@@ -17,7 +17,7 @@ export default function HomePage() {
           SGC News Portal
           </h1>
           <Wrapper>
-            {/* <PostCard /> */}
+            <PostCard />
           </Wrapper>
         </div>
       </div>
