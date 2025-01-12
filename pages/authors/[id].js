@@ -1,6 +1,6 @@
-// pages/authors/[id].js
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/router";
 import Wrapper from "@/components/Wrapper";
@@ -56,9 +56,11 @@ export default function AuthorPage() {
           </Link>
         </div>
         <div className="mt-8">
-          <img
+          <Image
             src="/no-posts.png"
             alt="No posts illustration"
+            width={500}
+            height={300}
             className="w-full h-64"
           />
         </div>
@@ -77,40 +79,42 @@ export default function AuthorPage() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-             <div
-             key={post._id}
-             className="bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden"
-           >
-             <Link href={`/post/${post._id}`}>
-               <div className="relative group">
-                 {/* Full-Width Category Banner */}
-                 <div className="absolute top-0 left-0 w-full bg-[#22C55E] text-white text-xs font-bold uppercase py-2 text-center shadow-md">
-                   {post.category}
-                 </div>
-                 <img
-                   className="h-48 md:h-64 w-full object-cover"
-                   src={`/uploads/${post.post_img[0]}`}
-                   alt={post.title}
-                 />
-               </div>
-               <div className="p-4">
-                 <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 hover:text-blue-500 transition-colors duration-300">
-                   {post.title}
-                 </h2>
-                 <p className="text-sm text-gray-500 mb-2">
-                   Author{" "}
-                   <span className="font-semibold">
-                     {post.authorDetails.username}
-                   </span>{" "}
-                   |{" "}
-                   <span>{new Date(post.post_date).toLocaleDateString()}</span>
-                 </p>
-                 <p className="text-gray-700 leading-relaxed mb-4">
-                   {post.description.slice(0, 100)}...
-                 </p>
-               </div>
-             </Link>
-           </div>
+            <div
+              key={post._id}
+              className="bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden"
+            >
+              <Link href={`/post/${post._id}`} passHref>
+                <div className="relative group">
+                  {/* Full-Width Category Banner */}
+                  <div className="absolute top-0 left-0 w-full bg-[#22C55E] text-white text-xs font-bold uppercase py-2 text-center shadow-md">
+                    {post.category}
+                  </div>
+                  <Image
+                    className="h-48 md:h-64 w-full object-cover"
+                    src={`/uploads/${post.post_img[0]}`}
+                    alt={post.title}
+                    width={500}
+                    height={300}
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 hover:text-blue-500 transition-colors duration-300">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-gray-500 mb-2">
+                    Author{" "}
+                    <span className="font-semibold">
+                      {post.authorDetails.username}
+                    </span>{" "}
+                    |{" "}
+                    <span>{new Date(post.post_date).toLocaleDateString()}</span>
+                  </p>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    {post.description.slice(0, 100)}...
+                  </p>
+                </div>
+              </Link>
+            </div>
           ))}
         </div>
       </Wrapper>
