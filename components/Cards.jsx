@@ -68,7 +68,7 @@ export default function Cards({ selectedAuthor }) {
                   
                 </div>
                 <div className="p-4">
-                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 hover:text-blue-600 transition-colors duration-300">
+                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 hover:text-green-500 transition-colors duration-300">
                     {post.title || "Untitled Post"}
                   </h2>
                   <p className="text-sm text-gray-500 mb-2">
