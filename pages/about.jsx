@@ -75,10 +75,10 @@ export default function AboutUs() {
                 </h3>
                 <p className="text-sm sm:text-base mb-3">
                   Humaira Tayyaba is a seasoned community leader and activist
-                  with over 20 years of experience in women's rights, education,
+                  with over 20 years of experience in women`&apos;s rights, education,
                   and humanitarian causes. She served as the Central President
                   of Islami Jamiat Talibat Pakistan from 1998 to 2001, leading
-                  the country's largest student organization. As the founder of{" "}
+                  the country`&apos;s largest student organization. As the founder of{" "}
                   <i className="font-bold text-red-500">Tameer</i>, she has
                   championed initiatives to empower women through education and
                   formal Islamic studies. Humaira has also held influential
@@ -86,7 +86,7 @@ export default function AboutUs() {
                   <i className="font-bold text-black">
                     Provincial President of Jamat-e-Islami Women Wing
                   </i>{" "}
-                  and a long-term member of the party's central executive
+                  and a long-term member of the party`&apos;s central executive
                   committee. She is the visionary behind the{" "}
                   <i className="font-bold text-red-500">Save Gaza Campaign</i>,
                   a civil society movement advocating for peace and
@@ -145,7 +145,7 @@ export default function AboutUs() {
                   <p className="text-gray-600 text-sm lg:text-md leading-relaxed">
                     Successfully reached agreements with government
                     representatives to address concerns and further our
-                    campaign's objectives, marking a pivotal step in our
+                    campaign`&apos;s objectives, marking a pivotal step in our
                     journey.
                   </p>
                 </div>
@@ -199,7 +199,7 @@ export default function AboutUs() {
                     powerful call for justice.
                   </p>
                   <p className="text-gray-600 italic text-sm lg:text-base">
-                    "From the river to the sea, Palestine will be free."
+                  &quot;From the river to the sea, Palestine will be free.&quot;
                   </p>
                 </div>
               </div>
