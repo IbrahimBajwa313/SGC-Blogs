@@ -1,9 +1,10 @@
 // pages/index.js
 import Wrapper from "../components/Wrapper";
-import PostCard from "../components/PostCard";
+// import PostCard from "../components/PostCard";
 import HeroSection from "@/components/HeroSection";
 import { FaSignOutAlt } from "react-icons/fa";
 import { useUser } from "../context/UserContext";
+import Cards from "@/components/Cards";
 
 export default function HomePage() {
   const { showPopup, updatePopup, logout } = useUser();
@@ -17,7 +18,8 @@ export default function HomePage() {
           SGC News Portal
           </h1>
           <Wrapper>
-            <PostCard />
+            {/* <PostCard /> */}
+            <Cards />
           </Wrapper>
         </div>
       </div>
