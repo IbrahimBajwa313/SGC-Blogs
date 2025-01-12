@@ -46,7 +46,7 @@ export default function AuthorPage() {
             No Posts Found
           </h2>
           <p className="text-gray-600 mb-6">
-            Sorry, we couldn't find any posts by the selected author. Check back
+            Sorry, we couldn&apos;t find any posts by the selected author. Check back
             later.
           </p>
           <Link href="/" passHref>

@@ -43,7 +43,7 @@ export default function AuthorPage() {
             No Posts Found
           </h2>
           <p className="text-gray-600 mb-6">
-            Sorry, we couldn't find any posts in the selected category. Check back later.
+            Sorry, we couldn&apos;t find any posts in the selected category. Check back later.
           </p>
           <Link href="/" passHref>
             <button className="bg-blue-500 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-600 transition duration-300 ease-in-out">
