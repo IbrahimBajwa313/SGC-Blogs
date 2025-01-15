@@ -34,30 +34,42 @@ const AddPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setisLoading(true);
-
+  
     const formData = new FormData();
     formData.append("title", post.title);
     formData.append("description", post.description);
     formData.append("category", post.category);
-    formData.append("author", localStorage.getItem("userId"));
-
+  
+    const authorId = localStorage.getItem("userId");
+    if (authorId) {
+      formData.append("author", authorId);
+    } else {
+      // Handle the case where the user ID is not set
+      setMsg("User ID is not found. Please log in.");
+      setSuccess(false);
+      setFailure(true);
+      setConfirmation(true);
+      setisLoading(false);
+      return;
+    }
+  
     postImages.forEach((image) => {
       formData.append("postImages", image);
     });
-
+  
     const res = await fetch("/api/addPost", {
       method: "POST",
       body: formData,
     });
-
+  
     const data = await res.json();
-
+  
     if (data.success) {
       setMsg("Posted Successfully!");
       setSuccess(true);
       setFailure(false);
       setConfirmation(true);
-
+  
       setTimeout(() => {
         setConfirmation(false);
       }, 3000);
@@ -68,7 +80,7 @@ const AddPost = () => {
       setSuccess(false);
       setFailure(true);
       setConfirmation(true);
-
+  
       setTimeout(() => {
         setConfirmation(false);
       }, 2000);
