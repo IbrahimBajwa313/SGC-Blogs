@@ -56,9 +56,7 @@ const Categories = () => {
   };
 
   useEffect(() => {
-    fetchCategories();
-    const role = localStorage.getItem("role");
-    setUserRole(role && role !== "0"); // Only set to true if role is not "0"
+    fetchCategories(); 
   }, []);
 
   if (isDeleting) return <Loader />;

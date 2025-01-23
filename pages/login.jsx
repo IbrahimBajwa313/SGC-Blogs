@@ -56,12 +56,7 @@ const Login = () => {
           // Store user data in localStorage
           localStorage.setItem("username", username);
           localStorage.setItem("role", role);
-          localStorage.setItem("userId", userId);
-
-          console.log("Login successful");
-          console.log("Username:", username);
-          console.log("Role:", role);
-          console.log("User ID:", userId);
+          localStorage.setItem("userId", userId); 
 
           // Execute the login function and navigate to the desired route
           login({ userId, username, role });
