@@ -44,13 +44,14 @@ const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
     fetchAuthors();
   }, []);
 
-  const menuData = [
-    { id: 1, name: "About", url: "/about" },
-    { id: 2, name: "Categories", subMenu: true },
-    { id: 3, name: "Authors", subMenu: true },
-    { id: 4, name: "Contact", url: "/contact" },
-    { id: 5, name: "Login", url: "/login" },
+  const data = [
+    { id: 1, name: "Home", url: "https://www.savegazacampaign.org/" },
+    { id: 2, name: "About", url: "/about" },
+    { id: 3, name: "Categories", subMenu: true },
+    { id: 4, name: "Authors", subMenu: true },
+    { id: 5, name: "Contact", url: "/contact"},
   ];
+
 
   return (
     <div>

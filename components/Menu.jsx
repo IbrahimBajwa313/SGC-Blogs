@@ -12,9 +12,11 @@ const Menu = ({ showCatMenu, setShowCatMenu, showAuthorMenu, setShowAuthorMenu }
   const router = useRouter();
 
   const data = [
-    { id: 1, name: "About", url: "/about" },
-    { id: 2, name: "Categories", subMenu: true },
-    { id: 3, name: "Authors", subMenu: true },
+    { id: 1, name: "Home", url: "https://www.savegazacampaign.org/" },
+    { id: 2, name: "About", url: "/about" },
+    { id: 3, name: "Categories", subMenu: true },
+    { id: 4, name: "Authors", subMenu: true },
+    { id: 5, name: "Contact", url: "/about"},
   ];
 
   // Fetch categories and authors
@@ -141,7 +143,7 @@ const Menu = ({ showCatMenu, setShowCatMenu, showAuthorMenu, setShowAuthorMenu }
           </React.Fragment>
         ))}
 
-        <li className="cursor-pointer border border-transparent rounded-md transition-transform duration-300 hover:scale-105 px-4 py-2">
+        {/* <li className="cursor-pointer border border-transparent rounded-md transition-transform duration-300 hover:scale-105 px-4 py-2">
           {localStorage.getItem("loggedInUser") && adminPage && (
             <span onClick={() => updatePopup(true)} className="cursor-pointer">
               Logout
@@ -155,7 +157,7 @@ const Menu = ({ showCatMenu, setShowCatMenu, showAuthorMenu, setShowAuthorMenu }
           {!localStorage.getItem("loggedInUser") && (
             <Link href='/login'>Login</Link>
           )}
-        </li>
+        </li> */}
       </ul>
     </div>
   );
